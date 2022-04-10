@@ -47,4 +47,4 @@ jobs:
     
     # Deploy
     - name : Deploy to SF Org
-      run: sfdx force:mdapi:deploy -l  -d ./toDeploy -u prod -w 10
+      run: sfdx force:mdapi:deploy -l NoTestRun -d ./toDeploy -u prod -w 10
