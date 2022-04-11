@@ -37,7 +37,7 @@ jobs:
       env:
         CLIENT_ID: ${{ secrets.SALESFORCEPRODCLIENTID }}
         INSTANCE_URL: ${{ secrets.SALESFORCEPRODINSTANCEURL }}
-      run: sfdx force:auth:jwt:grant --clientid $CLIENT_ID --jwtkeyfile ./buildfiles/server.key --username pradyumn@gmail.com --instanceurl $INSTANCE_URL -a prod
+      run: sfdx force:auth:jwt:grant --clientid $CLIENT_ID --jwtkeyfile ./buildfiles/server.key --username pradyumn@gmail.com --instanceurl https://login.salesforce.com -a prod
 
     # Convert to Deploy Source
     - name: Convert to Deploy Source
