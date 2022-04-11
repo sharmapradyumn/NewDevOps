@@ -36,14 +36,14 @@ jobs:
     - name: Authorize SF Org
       env:
         CLIENT_ID: ${{ secrets.SALESFORCEPRODCLIENTID }}
-      run: sfdx force:auth:jwt:grant --clientid $CLIENT_ID --jwtkeyfile ./buildfiles/server.key --username pradyumn@gmail.com --instanceurl https://login.salesforce.com -a prod
+      run: sfdx force:auth:jwt:grant --clientid 3MVG9fe4g9fhX0E5rp6DbIO1.EqMtwpHTwLXLINgAzydDMw_QbzCOixsasjIpF5eyrSalc2OgsgvjQq8tk2DT --jwtkeyfile ./buildfiles/server.key --username pradyumn@gmail.com --instanceurl https://login.salesforce.com -a prod
 
     # Convert to Deploy Source
     - name: Convert to Deploy Source
-      run: sfdx force:source:convert -r ./force-app -d ./toDeploy
+      run: sfdx force:source:convert -r ./force-app 
     
     # Run Validation of Deploy Source
     
     # Deploy 
     - name : Deploy to SF Org
-      run: sfdx force:mdapi:deploy -l NoTestRun -d ./toDeploy -u prod -w 10
+      run: sfdx force:mdapi:deploy -l NoTestRun -u prod -w 10
