@@ -1,0 +1,9 @@
+<apex:page standardController="Opportunity"  recordSetVar="opportunities" extensions="PayPalPayment">
+     <apex:form >
+
+   <p>
+       PaypalPayment
+         </p>
+
+   </apex:form>
+</apex:page>

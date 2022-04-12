@@ -1,0 +1,415 @@
+<apex:page id="mobileFriendlyVfUsingSlds" controller="PatientHistoryFormController" standardStylesheets="false" sideBar="false" showHeader="false">
+   <head>
+       
+       <apex:slds />
+
+       <!--We need the tags below to make the visualforce page mobile aware-->
+       <meta charset="UTF-8"/>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+       <title>Spinal health Review</title>
+   </head>
+
+  <apex:form >
+   <body>
+       <!--Only content within the slds-scope div will be styled with the slds system-->
+       <div class="slds-scope">
+           <!--This outer div just applies some padding to the left and right of the screen-->
+           <div class="slds-p-left_medium slds-p-right_medium">
+
+               <!--Now we declare an slds grid using the classes below-->
+               <div class="slds-grid slds-gutters slds-wrap">
+
+                   <!--By using slds-col slds-size_1-of-1 we are saying this column takes up all the space available in the row-->
+                   <div class="slds-col slds-size_1-of-1 slds-p-top_large">
+                       <div class="slds-text-heading_large slds-align_absolute-center slds-theme_inverse">Spinal Health Review</div>
+                   </div>
+
+                   <!--Here we just apply some vertical space-->
+                   <div class="slds-p-vertical_xx-large"></div>
+
+                   <!--Now for all the inputs, on large screens we want two inputs on each row,
+                   on smaller screen we want each input to take up a row. By using slds-large-size_1-of-2
+                   We are saying that when this is a large screen it should take up half of the horizontal space available-->
+                   
+
+                   <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@    Patient Basic Input  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+                   
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <!--The form element and everything inside is used to create the slds input-->
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="phone-id">Name</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="phone-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="email-id">Date</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="email-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="first-name-id">Clinic</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="first-name-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="Last-name-id">Doctor</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="Last-name-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@    Review Questions @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">1) What is Subluxation? (Tick all that applies)			
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Misalignment of the spinal vertebral, short of a dislocation</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label"> Dislocation of the spinal vertebral</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Spinal vertebral locked up	</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Muscle stiffness and ache</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">2) What are the common symptoms of subluxation (Tick all that applies)								
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">3) What is your expectation on how your problem will progress?													
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">4) If someone does not have pain, does that mean they are subluxation free?   														
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">5) What percentage of subluxations do not show active symptoms or conditions?														
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">6) What can cause subluxation? (Tick all that applies)												
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">6a) What degeneration phase are you in?											
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">6b) How many years have the degenerations in your spine been there?													
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">7a) How many years have the degenerations in your spine been there?													
+                   <div class="slds-form-element">
+                       <div class="slds-form-element__control">
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-72" value="checkbox-unique-id-72" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-72">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                            <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-74" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                           <div class="slds-checkbox">
+                               <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                               <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                   <span class="slds-checkbox_faux"></span>
+                                   <span class="slds-form-element__label">Checkbox Label</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="Last-name-id">12) What do you like the best about our clinic?			</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="Last-name-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="Last-name-id">Patient Signature</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="Last-name-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <!--To finish our form we just add an slds styled button-->
+                   <div class="slds-col slds-size_1-of-1 slds-p-top_large">
+                       <button class="slds-button slds-button_brand slds-align_absolute-center">Submit</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </body>
+    </apex:form>
+</apex:page>

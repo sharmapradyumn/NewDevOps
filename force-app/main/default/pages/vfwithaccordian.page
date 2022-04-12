@@ -1,0 +1,301 @@
+<apex:page id="mobileFriendlyVfUsingSlds" controller="PatientHistoryFormController" standardStylesheets="false" sideBar="false" showHeader="false">
+   <head>
+       
+       <apex:slds />
+
+       <!--We need the tags below to make the visualforce page mobile aware-->
+       <meta charset="UTF-8"/>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+       <title>Patient History Form</title>
+   </head>
+
+  <apex:form >
+   <body>
+       <!--Only content within the slds-scope div will be styled with the slds system-->
+       <div class="slds-scope">
+           <!--This outer div just applies some padding to the left and right of the screen-->
+           <div class="slds-p-left_medium slds-p-right_medium">
+
+               <!--Now we declare an slds grid using the classes below-->
+               <div class="slds-grid slds-gutters slds-wrap">
+
+                   <!--By using slds-col slds-size_1-of-1 we are saying this column takes up all the space available in the row-->
+                   <div class="slds-col slds-size_1-of-1 slds-p-top_large">
+                       <div class="slds-text-heading_large slds-align_absolute-center slds-theme_inverse">Patient History Form</div>
+                   </div>
+
+                   <!--Here we just apply some vertical space-->
+                   <div class="slds-p-vertical_xx-large"></div>
+                   
+                      <script>
+        function show(obj)
+        {
+            if(document.getElementById(obj).style.display == 'none')
+            {
+                document.getElementById(obj).style.display = 'block';
+            }
+            else
+                document.getElementById(obj).style.display = 'none';
+        }
+    </script>
+    
+
+                   <!--Now for all the inputs, on large screens we want two inputs on each row,
+                   on smaller screen we want each input to take up a row. By using slds-large-size_1-of-2
+                   We are saying that when this is a large screen it should take up half of the horizontal space available-->
+                   
+
+                   <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@    Patient Basic Input  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+
+                   
+                       
+               
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <!--The form element and everything inside is used to create the slds input-->
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="phone-id">Patient Name</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="phone-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="email-id">Marital Status</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="email-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="first-name-id">Age</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="first-name-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="Last-name-id">Children Name/Age</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="Last-name-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="colour-id">Occupation</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="colour-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Company Name</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Seen Chiropractor before</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium" >
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Clinic/Doctor Name</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                      
+                   <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@    Picklist and Doctore Note Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+                   
+                   
+                   <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Patient Injuries</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>  
+                   
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Patient Lifestyle</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>
+                   
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Patient Medical History</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>  
+                   
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Patient Medication</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>  
+                   
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Patient Complains</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>  
+                   
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Quality Of Life</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div>  
+                   
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Affected Daily activities</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div> 
+                   
+                    <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                   <div class="slds-form-element">
+                       <label class="slds-form-element__label" for="favourite-id">Health Goals</label>
+                       <div class="slds-form-element__control">
+                           <div class="slds-select_container">
+                               <apex:selectList size="1" value="{!selectedCountry1}" styleClass="slds-select">
+                                   <apex:selectOptions value="{!countrieLst}" />
+                               </apex:selectList>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                 <div class="slds-col slds-size_1-of-2 slds-large-size_1-of-2 slds-p-around_medium">
+                       <div class="slds-form-element">
+                           <label class="slds-form-element__label" for="favourite-id">Doctor Note</label>
+                           <div class="slds-form-element__control">
+                               <input type="text" id="favourite-id" class="slds-input" />
+                           </div>
+                       </div>
+                   </div> 
+                   <!--To finish our form we just add an slds styled button-->
+                   <div class="slds-col slds-size_1-of-1 slds-p-top_large">
+                       <button class="slds-button slds-button_brand slds-align_absolute-center">Submit</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </body>
+    </apex:form>
+</apex:page>
