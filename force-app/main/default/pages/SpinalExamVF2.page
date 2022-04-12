@@ -1,0 +1,173 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>SLDS ResponsiveDesign Visualforce Page in Salesforce Mobile</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            
+            <!-- Import the Design System style sheet -->
+            <apex:slds />
+        </head>
+        <body>
+            
+            <!-- REQUIRED SLDS WRAPPER -->
+            <div class="slds-scope">
+                
+                <!-- PRIMARY CONTENT WRAPPER -->
+                
+                <!-- RESPONSIVE GRID EXAMPLE -->
+                <div class="myapp">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1</div>
+                            
+                            
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">C1</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">C2</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">C3</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div> 
+                            
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 2</div>
+                            
+                            
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                
+                                <div class="slds-checkbox slds-align_absolute-center">
+                                    <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                                    <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                        <span class="slds-checkbox_faux"></span>
+                                    </label>
+                                </div>
+                                
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                                               <div class="slds-checkbox slds-align_absolute-center">
+                                    <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                                    <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                        <span class="slds-checkbox_faux"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                               <div class="slds-checkbox slds-align_absolute-center">
+                                    <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                                    <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                        <span class="slds-checkbox_faux"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                               <div class="slds-checkbox slds-align_absolute-center">
+                                    <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                                    <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                        <span class="slds-checkbox_faux"></span>
+                                    </label>
+                                </div>
+                            </div> 
+                            
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-checkbox slds-align_absolute-center">
+                                    <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-75" checked="" />
+                                    <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                        <span class="slds-checkbox_faux"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 3</div>
+                            
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">C1</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">C2</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">C3</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div> 
+                            
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                            <div class="slds-col slds-size--12-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-1">
+                                <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 1of4</div> 
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 4</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 5</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 6</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 7</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 8</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box 9</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box t</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box e</div>
+                        </div>
+                        <div class="slds-col slds-size--1-of-12 slds-small-size--4-of-12 slds-medium-size--1-of-12">
+                            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around--x-small">Box t</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / RESPONSIVE GRID EXAMPLE -->
+            </div>
+        </body>
+    </html>
+</apex:page>

@@ -1,0 +1,559 @@
+<apex:page id="mobileFriendlyVfUsingSlds" controller="PatientHistoryFormController" standardStylesheets="false" sideBar="false" showHeader="false" >
+    <head>
+        
+        <apex:slds />
+        
+        <!--We need the tags below to make the visualforce page mobile aware-->
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Patient Spinal Exam Form</title>
+    </head>
+    <body>
+        <!--Only content within the slds-scope div will be styled with the slds system-->
+        <div class="slds-scope">
+            <!--This outer div just applies some padding to the left and right of the screen-->
+            <div class="slds-p-left_small slds-p-right_small">
+                
+                <!--Now we declare an slds grid using the classes below-->
+                <div class="slds-grid slds-gutters slds-wrap">
+                    
+                    <!--By using slds-col slds-size_1-of-1 we are saying this column takes up all the space available in the row-->
+                    <div class="slds-col slds-size_1-of-1 slds-p-top_large">
+                        <div class="slds-text-heading_large slds-align_absolute-center slds-theme_inverse">Patient Spinal Exam Form</div>
+                    </div>
+                    
+                    <!--Here we just apply some vertical space-->
+                    <div class="slds-p-vertical_xx-large"></div>
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">Segments</label> 
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">OCC</label> 
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col"> 
+                            <label class="slds-form-element__label" for="favourite-id">C1</label> 
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">C2</label>
+                        </div>
+                        <div class="slds-col">
+                            <div class="slds-p-vertical_xx-small"></div>
+                            <label class="slds-form-element__label" for="favourite-id">C3</label>
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">C4</label>
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">C5</label>
+                        </div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">C6</label>
+                        </div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">C7</label>
+                        </div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">T1</label>
+                        </div>
+                        <div class="slds-col">
+                            <label class="slds-form-element__label" for="favourite-id">T2</label>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <span>L</span>
+                        </div>
+                        <div class="slds-p-vertical_xx-medium"></div>
+                        <br/>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <br/>
+                        
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-76" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-76">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-77" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-77">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-78" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-78">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <span>R</span>
+                        </div>
+                        <div class="slds-p-vertical_xx-medium"></div>
+                        <br/>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <br/>
+                        
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-76" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-76">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-77" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-77">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-78" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-78">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <span>Fixation</span>
+                        </div>
+                        <div class="slds-p-vertical_xx-medium"></div>
+                        <br/>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <br/>
+                        
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-76" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-76">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-77" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-77">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-78" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-78">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <span>Muscle Spasm</span>
+                        </div>
+                        <div class="slds-p-vertical_xx-medium"></div>
+                        <br/>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <br/>
+                        
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-76" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-76">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-77" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-77">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-78" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-78">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <span>P</span>
+                        </div>
+                        <div class="slds-p-vertical_xx-medium"></div>
+                        <br/>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <br/>
+                        
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-76" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-76">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-77" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-77">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-78" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-78">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <span>PR</span>
+                        </div>
+                        <div class="slds-p-vertical_xx-medium"></div>
+                        <br/>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-73">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <br/>
+                        
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-74" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-74">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-75" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-75">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-76" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-76">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-77" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-77">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        <div class="slds-p-vertical_xx-small"></div>
+                        <div class="slds-col">
+                            
+                            <div class="slds-checkbox">
+                                <input type="checkbox" name="options" id="checkbox-unique-id-78" value="checkbox-unique-id-73" checked="" />
+                                <label class="slds-checkbox__label" for="checkbox-unique-id-78">
+                                    <span class="slds-checkbox_faux"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slds-col">
+                        <span>PL</span>
+                    </div>
+                    <div class="slds-col">
+                        <span>PRS</span>
+                    </div>
+                    <div class="slds-col">
+                        <span>PLS</span>
+                    </div>
+                    
+                    <div class="slds-col">
+                        <span>ANT</span>
+                    </div>  
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col">
+                            <span>Description</span>
+                        </div> 
+                        <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-10 slds-p-around_medium">
+                            <div class="slds-form-element">
+                                
+                                <div class="slds-form-element__control">
+                                    <input type="text" id="favourite-id" class="slds-input" />
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-10 slds-p-around_medium">
+                            <div class="slds-form-element">
+                                
+                                <div class="slds-form-element__control">
+                                    <input type="text" id="favourite-id" class="slds-input" />
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-10 slds-p-around_medium">
+                            <div class="slds-form-element">
+                                
+                                <div class="slds-form-element__control">
+                                    <input type="text" id="favourite-id" class="slds-input" />
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    
+    
+</apex:page>
