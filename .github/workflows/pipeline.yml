@@ -35,7 +35,7 @@ jobs:
     # Authorize SF Org
     - name: Authorize SF Org
       env:
-        CLIENT_ID: ${{ secrets.SALESFORCEPRODCLIENTID }}
+        CLIENT_ID: '${{ secrets.SALESFORCEPRODCLIENTID }}'
       run: sfdx force:auth:jwt:grant --clientid $CLIENT_ID --jwtkeyfile ./buildfiles/server.key --username pradyumn@gmail.com --instanceurl https://login.salesforce.com -a prod
 
     # Convert to Deploy Source
