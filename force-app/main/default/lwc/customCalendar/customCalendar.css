@@ -1,0 +1,13 @@
+.section {
+    --slds-c-popover-position-zindex: 99999;
+  }
+  
+  .slds-popover.slds-nubbin_left{
+    position: absolute;
+    left:0rem;
+    top:-1.3rem;
+  }
+  
+  .fullcalendarjs {
+    z-index: O;
+  }

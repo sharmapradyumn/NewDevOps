@@ -1,0 +1,28 @@
+<template>
+    <lightning-card  variant="Narrow"  
+      title="Calendrier" icon-name="standard:event">
+      <div class="slds-grid">
+        <div class="slds-var-m-around_small slds-is-relative">
+          <div id="calendar" class="fullcalendarjs" lwc:dom="manual"></div>
+        </div>
+      </div>
+      <template if:true={selectedEvent}>
+        <section aria-labelledby="panel-heading-id" class="slds-popover slds-popover_panel slds-nubbin_left-top" role="dialog">
+          <div class="slds-popover__header">
+              <header class="slds-media slds-media_center slds-var-m-bottom_small">
+                  <div class="slds-media__body">
+                      <h2 class="slds-text-heading_medium slds-hyphenate">
+                          Title
+                      </h2>
+                  </div>
+              </header>
+          </div>
+          <div class="slds-popover__body">
+            <lightning-record-form record-id={recId} object-api-name={objectName}
+                layout-type="Compact" columns="2" mode="readonly">
+            </lightning-record-form>
+          </div>
+        </section>
+      </template>
+    </lightning-card>
+  </template>
