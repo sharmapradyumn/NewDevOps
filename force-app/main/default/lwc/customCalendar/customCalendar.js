@@ -1,6 +1,6 @@
 import { LightningElement, api, track } from 'lwc';
 import { loadScript, loadStyle } from 'lightning/platformResourceLoader';
-import FullCalendarJS from '@salesforce/resourceUrl/FullCalendar3';
+//import FullCalendarJS from '@salesforce/resourceUrl/FullCalendar3';
 import { NavigationMixin } from 'lightning/navigation';
 
 export default class CustomCalendar extends LightningElement {
@@ -27,11 +27,11 @@ export default class CustomCalendar extends LightningElement {
       // Executes all loadScript and loadStyle promises
       // and only resolves them once all promises are done
       Promise.all([
-        loadScript(this, FullCalendarJS + '/fullcalendar-3.10.5/lib/jquery.min.js'),
+        /*loadScript(this, FullCalendarJS + '/fullcalendar-3.10.5/lib/jquery.min.js'),
         loadScript(this, FullCalendarJS + '/fullcalendar-3.10.5/lib/moment.min.js'),
         loadScript(this, FullCalendarJS + '/fullcalendar-3.10.5/fullcalendar.min.js'),
         loadScript(this, FullCalendarJS + '/fullcalendar-3.10.5/locale/fr.js'),
-        loadStyle(this, FullCalendarJS + '/fullcalendar-3.10.5/fullcalendar.min.css')
+        loadStyle(this, FullCalendarJS + '/fullcalendar-3.10.5/fullcalendar.min.css')*/
       ])
       .then(() => {
         // Initialise the calendar configuration
